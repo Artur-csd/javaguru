@@ -9,16 +9,16 @@ import java.util.StringJoiner;
 public class IgraChetireRjad {
     public static void main(String[] args) {
 
-        int height = 6;
-        int width = 7;
-        int count = height*width;
-        int playerStart = 1;
+        int height = 6; //Высота поля
+        int width = 7; //ширина поля
+        int count = height*width; //если поле полное то победила дружба
+        int playerStart = 1; //смена играков
 
         Scanner scanner = new Scanner(System.in);
-        int intNumber = 1;
-        int iCol;
+        int intNumber = 1;  //если ввод 0 то выход из игры
+        int iCol; //для проверки полная ли колонка
 
-        boolean turnDone;
+        boolean turnDone; //если верно переход хода
 
 
 
@@ -35,9 +35,9 @@ public class IgraChetireRjad {
         String p1Symbol = " X ";
         String p2Symbol = " O ";
         String emSymbol = " + ";
-        String symb = p1Symbol;
-        String player = player1;
-        String[][] arr = new String[height][width];
+        String symb = p1Symbol; // меняет знак игрока
+        String player = player1; // меняет игрока при выводе сообщения
+        String[][] arr = new String[height][width]; // массив поля
 
         /*Делает пустое поле*/
         for(int iHeight=0; iHeight<height; iHeight++)
@@ -68,12 +68,13 @@ public class IgraChetireRjad {
                 }
             }
 
-
+            /*Сообщение и ввод данных*/
             System.out.println();
             System.out.print(player + " " + infoText);
             intNumber = scanner.nextInt();
             System.out.println();
 
+            /*есть ли колонка в поле если нет просит другое число*/
             if((intNumber > 0) && (intNumber < width)){
                 turnDone = false;
                 iCol = 0;
@@ -98,20 +99,20 @@ public class IgraChetireRjad {
                     }
                 }
                 if(iCol >= height){
-                    System.out.println(infoFull);
+                    System.out.println(infoFull); //нет места в колонки
                 }
 
             }
             else{
-                System.out.println(wrongNum);
+                System.out.println(wrongNum); //Нет такой колонки
             }
 
         }
         if (intNumber == 0){
-            System.out.println(infoExit);
+            System.out.println(infoExit); //Вышли из игры
         }
         if (count == 0){
-            System.out.println(noWiner);
+            System.out.println(noWiner); //На поле нет места
         }
 
     }

@@ -75,7 +75,7 @@ public class IgraChetireRjad {
             System.out.println();
 
             /*есть ли колонка в поле если нет просит другое число*/
-            if((intNumber > 0) && (intNumber < width)){
+            if((intNumber > 0) && (intNumber <= width)){
                 turnDone = false;
                 iCol = 0;
                 while(!turnDone && iCol < height){
@@ -99,7 +99,7 @@ public class IgraChetireRjad {
                     }
                 }
                 if(iCol >= height){
-                    System.out.println(infoFull); //нет места в колонки
+                    System.out.println(infoFull); //нет места в колонке
                 }
 
             }

@@ -32,9 +32,9 @@ public class IgraChetireRjad {
         String wrongNum = "Мимо, это за пределами поля";
         String player1 = "Игрок 1";
         String player2 = "Игрок 2";
-        String p1Symbol = " X ";
-        String p2Symbol = " O ";
-        String emSymbol = " + ";
+        String p1Symbol = "X";
+        String p2Symbol = "O";
+        String emSymbol = "+";
         String symb = p1Symbol; // меняет знак игрока
         String player = player1; // меняет игрока при выводе сообщения
         String[][] arr = new String[height][width]; // массив поля
@@ -60,10 +60,10 @@ public class IgraChetireRjad {
             for(int iHeight2 = (height-1); iHeight2>=0; iHeight2--){
                 for(int iWidth2 = 0; iWidth2 < width; iWidth2++){
                     if(iWidth2 != (width-1)){
-                        System.out.print(arr[iHeight2][iWidth2]);
+                        System.out.print(" " + arr[iHeight2][iWidth2] + " ");
                     }
                     else{
-                        System.out.println(arr[iHeight2][iWidth2]);
+                        System.out.println(" " + arr[iHeight2][iWidth2] + " ");
                     }
                 }
             }
